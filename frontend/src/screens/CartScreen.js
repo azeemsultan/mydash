@@ -17,7 +17,8 @@ function CartScreen(props){
          props.history.push("/signin?redirect=shipping");
      }
     const serviceId= props.match.params.id;
-    const qty = props.location.search ? Number (props.location.search.split("=")[1]):1;
+    const qty = props.location.search ? Number (props.location.search.split("qty")[1]):1;
+   
     const dispatch = useDispatch();
     useEffect(()=>
     {
@@ -26,24 +27,30 @@ function CartScreen(props){
             dispatch(addToCart(serviceId,qty));
         }
     }, [])
+    
     return(
+        
         <div className="cart">
             <div className="cart-list">
             <ul className="cart-list-container">
-            <li>
+            <li className="cart-list-item">
                 <h3>
+               
                     Shopping Cart
                 </h3>
                 <div className="price">
                     Price
                 </div>
                 </li>
+                
               <div></div>  
             {
                 cartItems.length === 0? 
                 <div>
                     Cart is empty
+                    <hr/>
                 </div>
+             
                 :
                 cartItems.map( item =>
                     <li>
@@ -67,29 +74,40 @@ function CartScreen(props){
                                 </select>
                                 <button type="button" className="btn-remove" onClick={()=> removeFromCartHandler (item.service)}>
                                     Remove
+                                     
                                 </button>
+                                <hr/>
                             </div>
                         </div>
+                      
                         <div className="cart-price">
                             {item.price}
+                            <hr/>
                         </div> 
+                        
                     </li>
-                )    
+                    
+                )      
             }
+            
             </ul>
-            </div>
-         
 
+         
+          
+            </div>
+           
             <div className="cart-action">
             <h3>
                 Subtotal ( {cartItems.reduce((a,c)=> a+c.qty , 0)} hours)
-                :
-             {cartItems.reduce((a,c) => a + c.price* c.qty, 0)}$
-            </h3>
+                  : $
+             {cartItems.reduce((a,c) => a + c.price* c.qty, 0)}
+             </h3>
             <button onClick={checkoutHandler} className="button-primary" disabled={cartItems.length === 0}>
                 Proceed to Checkout
             </button>
+            <hr/>
             </div>
+          
         </div>
         
     )

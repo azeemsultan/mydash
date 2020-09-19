@@ -1,5 +1,5 @@
 html{
-  font-size: 62.5%;
+  font-size: 70.5%;
   box-sizing: border-box;
 }
 
@@ -52,16 +52,7 @@ body{
 .header-links a:hover{
   color: #88310f;
 }
-.main{
-  grid-area: main;
-  background-image:
-    linear-gradient(
-      to top right, 
-       #FDFFFC,#2a6592
-    );
-    
-  
-}
+
 .footer{
   grid-area: footer;
   color: #ffffff;
@@ -318,13 +309,14 @@ background-color: red;
   display:flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   border-bottom: .1rem #808080;;
 }
 .cart-list-container li img{
-  max-height: 10rem;
-  max-width: 10rem;
+  max-height: 12rem;
+  max-width: 12rem;
   flex: 1 1;
+  border-radius: 1.2rem;
  
   
 
@@ -333,11 +325,13 @@ background-color: red;
   display: flex;
   justify-content: space-between;
  align-items: flex-end;
+
  
 }
 .cart-name{
   flex: 8 1;
   font-weight: bold;
+  margin-left: 1rem;
 }
 
 .cart-price{
@@ -377,3 +371,4 @@ color:blue;
   background-color: #404040;
   color: #f8f8f8;
 }
+

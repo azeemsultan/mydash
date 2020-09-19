@@ -5,8 +5,8 @@ import data from './data';
 const app= express();
 
 app.get("/api/serviceproviders/:id" , (req,res) => {
-    const productId = req.params.id;
-    const serviceprovider = data.serviceproviders.find( x=> x._id=== productId);
+    const serviceId = req.params.id;
+    const serviceprovider = data.serviceproviders.find( x=> x._id=== serviceId);
     if(serviceprovider)
     res.send(serviceprovider)
     else

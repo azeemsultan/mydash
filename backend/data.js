@@ -38,7 +38,7 @@ export default  {
     },
     { 
         _id:'4',
-        name: 'Nikklaus',
+        name: 'Laus',
         image:'/images/plumber.jpg',
         category: 'Plumber',
         rate: 20 ,
@@ -63,6 +63,28 @@ export default  {
         image:'/images/beauty.jpg',
         category: 'Beautician',
         rate: 20 ,
+        rating: 5.0,
+        description:'responsibilities include arranging regular lorem ipsum',
+        status: 'On Duty',
+        countInStock: 10
+    },
+    {
+        _id:'7',
+        name: 'Hayley Marshall',
+        image:'/images/hayley.jpg',
+        category: 'Wolf',
+        rate: 200 ,
+        rating: 5.0,
+        description:'I love Azeem and i can do anything for him, fuck elijah and usman nigro like person',
+        status: 'On Duty',
+        countInStock: 10
+    },
+    {
+        _id:'8',
+        name: 'Klaus Mikaelson',
+        image:'/images/klaus.jpg',
+        category: 'Original',
+        rate: 200 ,
         rating: 5.0,
         description:'responsibilities include arranging regular lorem ipsum',
         status: 'On Duty',

@@ -4,6 +4,9 @@ import ServiceScreen from './screens/ServiceScreen';
 import {BrowserRouter,Route,Link} from 'react-router-dom';
 import CartScreen from './screens/CartScreen';
 import Newsfeed from './Newsfeed/newsfeed';
+import NearBy from './Nearby/nearby';
+
+
 
 function App() {
 
@@ -17,6 +20,7 @@ function App() {
     }
     return (
 <BrowserRouter>
+
     <div className="grid-container">
      
     <header className="header">
@@ -44,16 +48,17 @@ function App() {
             <a href="./Newsfeed/newsfeed">Newsfeed</a>  
         </li>
         <li>
-            <a href="index.html">Nearby Me</a>  
+            <a href="./Nearby/nearby">Nearby Me</a>  
         </li>
        </ul>
    </aside>
 
    <main className="main">
         <div className="content">
-            <Route path="/serviceprovider/:id" component={ServiceScreen}/>
-            <Route path="/cart/:id?" component={CartScreen}/>
-            <Route path="/newsfeed/" component={Newsfeed}/>
+            <Route path="/serviceprovider/:id"  exact={true} component={ServiceScreen}/>
+            <Route path="/cart/:id?"  exact={true} component={CartScreen}/>
+            <Route path="/newsfeed/"   component={Newsfeed}/>
+            <Route path="/nearby/"   component={NearBy}/>
             <Route path="/" exact={true} component={HomeScreen}/>
             
         </div>
