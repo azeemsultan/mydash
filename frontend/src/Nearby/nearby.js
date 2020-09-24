@@ -7,7 +7,7 @@ import ServiceNear from './serviceNear';
 const NearBy = () => {
     return (
     <div
-        style={{backgroundColor:"#D3D3D3", fontFamily:"Courier New"}}
+        style={{backgroundColor:"#6c8ab8", fontFamily:"Courier New"}}
     >
         <div>
         <Search />

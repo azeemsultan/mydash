@@ -30,7 +30,7 @@ export default  {
         category: 'Driver',
         rate: 20 ,
         rating: 4.2,
-        description:'responsibilities include arranging regular cleaning and maintenance services for  vehicle, planning each route based on road and traffic conditions and managing payments.',
+        description:'responsibilities include arranging regular cleaning .',
         status: 'Available',
         countInStock: 10
         

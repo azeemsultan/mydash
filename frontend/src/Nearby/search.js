@@ -53,6 +53,7 @@ const Search = () => {
     size='medium'
     label="Enter Address"
    onChange={getLocation}
+   
     />
 
     </div>
@@ -63,13 +64,13 @@ const Search = () => {
     
       <Grid container>
 
-      <Grid item md="5">
+      <Grid item md={5}>
         <h4 style={{marginLeft:20}}>
           Nothing to show here 
         </h4>
       </Grid>
       
-      <Grid item md="1">
+      <Grid item md={1}>
     
     <Button 
     style={{marginTop:10, marginLeft:10, fontSize:20, backgroundColor:'#0049B7', color:'#E5EAF5' }}
