@@ -17,6 +17,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import { Grid } from '@material-ui/core';
 
 
 
@@ -71,12 +72,19 @@ function HomeScreen (props) {
     
     return loading ? <div>Loading...</div>:
     error? <div> error </div>:
-    (
+    ( <Grid container>
+      <Grid item sm={1}> 
+</Grid>
+     
+<Grid item sm={10}>
         <ul className="serviceproviders">
+      
         {
             serviceproviders.map(serviceprovider=>
              
             <li key={serviceprovider._id}> 
+  
+      
            <Card className={classes.root}>
       <CardHeader
         avatar={
@@ -149,7 +157,12 @@ function HomeScreen (props) {
     </Card>
             </li>)
         }
+      
         </ul>
+        </Grid>
+        <Grid item sm={1}> 
+     </Grid>
+        </Grid>
     )
 }
 

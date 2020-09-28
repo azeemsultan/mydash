@@ -9,8 +9,7 @@ class Gmaps extends Component {
         <Map
         containerStyle = {{
               
-            width: '42%',
-            height: '36.8%'
+       
         }}
          google={this.props.google} zoom={14}>
  

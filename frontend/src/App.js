@@ -16,12 +16,11 @@ function App() {
  
     return (
 <BrowserRouter>
+
 <Header/>
- <Grid container>
+
     
-     <Grid item sm={1}> 
-     </Grid>
-     <Grid item sm={11}>
+ 
 
    <main className="main">
         <div className="content">
@@ -36,9 +35,10 @@ function App() {
        
     </main>
 
-    </Grid>
+
+  
+
     <Footer/>
-    </Grid>
 </BrowserRouter>
   );
 }

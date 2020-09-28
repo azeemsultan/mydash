@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux';
 import { detailsService } from '../actions/serviceprovideraction';
+import { Button, Grid, Paper } from '@material-ui/core';
 
 function ServiceScreen (props) {
     const [qty, setQty] = useState(1);
@@ -22,26 +23,36 @@ function ServiceScreen (props) {
 
     return(
  
-        <div className>
-            <div className="backtoresult">
-                <Link to="/">
-                    <button className="backtoresultbtn">Back to result</button> </Link>
-            </div>
-
+        <Grid container>
+           
             
             {loading? <div>Loading...</div>:
             error? <div> {error} hehehe </div>:
 
 
             (
+             
 
+             
                 <div className="details">
+                    <Grid item sm={6}>
                 <div className="details-image">
                  <img src={serviceprovider.image} alt="serviceprovider" ></img>   
                  </div>
-                 <div className="details-info">
+                
+                <Link to="/">
+                    <Button   style={{marginTop:'20px'}} variant="contained" color="primary">Back to result</Button> </Link>
+        
+
+                 </Grid>
+                
+      
+                 <Grid item sm={3} xs={12}>
+                     
+                 <div className="details-info"  style={{marginTop:'20px'}}>
                      <ul>
-                         <li>
+                   
+                     <li>
                            <h4> {serviceprovider.name} </h4>  
                          </li>
                          <li>
@@ -54,9 +65,14 @@ function ServiceScreen (props) {
                              Description:
                               {serviceprovider.description} 
                          </li>
+
+                         
                   </ul>
                 </div>
-                <div className="details-action">
+                </Grid>
+ 
+                <Grid item sm={2} xs={12}>
+                <div className="details-action" style={{marginTop:'20px'}}>
                     <ul>
                         <li>
                             Price: {serviceprovider.rate}$
@@ -82,7 +98,9 @@ function ServiceScreen (props) {
                         </li>
                     </ul>
                 </div>
+                </Grid>
             </div>
+            
             
             )
 }
@@ -91,7 +109,7 @@ function ServiceScreen (props) {
             
             
      
-        </div> )
+</Grid>)
     
 }
 
