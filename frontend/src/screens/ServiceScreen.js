@@ -8,6 +8,7 @@ function ServiceScreen (props) {
     const [qty, setQty] = useState(1);
     const serviceDetails= useSelector(state=> state.serviceDetails);
     const {serviceprovider, loading, error}= serviceDetails;
+
     const dispatch = useDispatch();
 
     useEffect(()=>{
@@ -59,7 +60,7 @@ function ServiceScreen (props) {
                              {serviceprovider.rating} Stars
                          </li>
                          <li>
-                           Price:{serviceprovider.rate} $
+                           Price:{serviceprovider.price} $
                          </li>
                          <li>
                              Description:
@@ -75,7 +76,7 @@ function ServiceScreen (props) {
                 <div className="details-action" style={{marginTop:'20px'}}>
                     <ul>
                         <li>
-                            Price: {serviceprovider.rate}$
+                            Price: {serviceprovider.price}$
                         </li>
                         <li>
                             Status: {serviceprovider.countInStock> 0? "Available": "Out of Stock"}

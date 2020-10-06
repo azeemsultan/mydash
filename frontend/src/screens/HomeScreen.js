@@ -56,8 +56,8 @@ function HomeScreen (props) {
   };
 
 
-    const serviceproviderList = useSelector(state => state.serviceproviderList);
-    const { serviceproviders, loading, error } = serviceproviderList;
+    const serviceProviderList = useSelector(state => state.serviceProviderList);
+    const { serviceproviders, loading, error } = serviceProviderList;
     const dispatch = useDispatch();
 
 

@@ -9,7 +9,8 @@ import Avatar from '@material-ui/core/Avatar';
 import nikklaus from './nikklaus.jpg'
 import IconButton from '@material-ui/core/IconButton';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
-import Posts from './posts';
+import Posts from './postingArea';
+import { useSelector } from 'react-redux';
 const useStyles = makeStyles((theme) => ({
     root: {
       width: '100%',
@@ -28,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
 
   
 const Profile = () => {
-
+  const userSignin = useSelector(state=>state.userSignin);
+  const {userInfo} = userSignin;
     const classes = useStyles();
     return ( 
       <Grid container direction="coloumn">
@@ -47,7 +49,7 @@ const Profile = () => {
       </label>
       </div>
       <Typography className={classes.avatarst} variant="h3"  style={{color:'#6042f5' , marginLeft:'40px'}}>
-          Klaus Mikaelson
+      {userInfo.name}
           <Divider style={{marginTop:'30px'}}/>
           Dashboard
           <Divider style={{marginTop:'30px'}}/>

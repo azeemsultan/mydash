@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { addToCart, removeFromCart } from '../actions/cartaction';
 import { useDispatch, useSelector} from 'react-redux'
 import { Link } from 'react-router-dom';
+import { serviceproviderListReducer } from '../reducers/serviceproviderReducer';
 
 function CartScreen(props){
 
@@ -81,7 +82,7 @@ function CartScreen(props){
                         </div>
                       
                         <div className="cart-price">
-                            {item.price}
+                           {item.price}$
                             <hr/>
                         </div> 
                         

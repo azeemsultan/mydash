@@ -17,6 +17,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import { Link } from 'react-router-dom';
 import SideBar from './Sidebar';
 import { Typography } from '@material-ui/core';
+import { useSelector } from 'react-redux';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -90,6 +91,9 @@ const openMenu=() =>{
 }
 
 const Header = () => {
+
+        const userSignin = useSelector(state=>state.userSignin);
+        const {userInfo} = userSignin;
   
         const classes = useStyles();
         const [anchorEl, setAnchorEl] = React.useState(null);
@@ -126,8 +130,14 @@ const Header = () => {
             open={isMenuOpen}
             onClose={handleMenuClose}
           >
-            <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+            <MenuItem onClick={handleMenuClose}>
+              {
+                userInfo ? <Link to="/profil">{userInfo.name}</Link>:
+                <Link to="/signin"> Sign in </Link>
+              }
+              
+              </MenuItem>
+            <MenuItem onClick={handleMenuClose}><Link to="/Profile/profile">My account</Link></MenuItem>
           </Menu>
         );
       

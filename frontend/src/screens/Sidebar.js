@@ -87,10 +87,10 @@ export default function SideBar() {
           <List >
           <CloseIcon className={classes.btnStyle}  onClick={closeMenu}/>
           <div className={classes.typo}>
-           <InboxIcon className={classes.iconcl} />  <a  href="./Profile/profile">Profile</a>  <Divider className={classes.div}/>
+           <InboxIcon className={classes.iconcl} />  <a  href="/Profile/profile">Profile</a>  <Divider className={classes.div}/>
            <InboxIcon className={classes.iconcl} /> <a   href="/">Services</a>  <Divider  className={classes.div} />
-            <MailIcon className={classes.iconcl} />  <a   href="./Nearby/nearby">Nearby</a>  <Divider   className={classes.div}/>
-           <MailIcon className={classes.iconcl} />  <a   href="./Newsfeed/newsfeed">Newsfeed</a>  <Divider   className={classes.div}/>
+            <MailIcon className={classes.iconcl} />  <a   href="/Nearby/nearby">Nearby</a>  <Divider   className={classes.div}/>
+           <MailIcon className={classes.iconcl} />  <a   href="/Newsfeed/newsfeed">Newsfeed</a>  <Divider   className={classes.div}/>
        </div>
           </List>
      
