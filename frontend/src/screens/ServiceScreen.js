@@ -23,9 +23,8 @@ function ServiceScreen (props) {
     }
 
     return(
- 
-        <Grid container>
-           
+      
+       <div>
             
             {loading? <div>Loading...</div>:
             error? <div> {error} hehehe </div>:
@@ -36,21 +35,16 @@ function ServiceScreen (props) {
 
              
                 <div className="details">
-                    <Grid item sm={6}>
+                
                 <div className="details-image">
-                 <img src={serviceprovider.image} alt="serviceprovider" ></img>   
+                 <img style={{maxWidth:'600px', height:'400px'}} src={serviceprovider.image} alt="serviceprovider" ></img>   
                  </div>
                 
-                <Link to="/">
-                    <Button   style={{marginTop:'20px'}} variant="contained" color="primary">Back to result</Button> </Link>
+              
         
 
-                 </Grid>
-                
-      
-                 <Grid item sm={3} xs={12}>
                      
-                 <div className="details-info"  style={{marginTop:'20px'}}>
+                 <div className="details-info"  style={{marginTop:'20px',width:'600px',height:'200px'}}>
                      <ul>
                    
                      <li>
@@ -70,10 +64,10 @@ function ServiceScreen (props) {
                          
                   </ul>
                 </div>
-                </Grid>
+              
  
-                <Grid item sm={2} xs={12}>
-                <div className="details-action" style={{marginTop:'20px'}}>
+             
+                <div className="details-action" style={{marginTop:'20px',width:'400px',height:'200px'}}>
                     <ul>
                         <li>
                             Price: {serviceprovider.price}$
@@ -99,7 +93,8 @@ function ServiceScreen (props) {
                         </li>
                     </ul>
                 </div>
-                </Grid>
+                
+             
             </div>
             
             
@@ -108,9 +103,10 @@ function ServiceScreen (props) {
 
 
             
-            
+<Link to="/">
+                    <Button   style={{marginTop:'20px',marginLeft:'20px',width:'200px',height:'50px',fontSize:'20px'}} variant="contained" color="primary">Back to result</Button> </Link>         
      
-</Grid>)
+                    </div>)
     
 }
 

@@ -18,6 +18,7 @@ import { Link } from 'react-router-dom';
 import SideBar from './Sidebar';
 import { Typography } from '@material-ui/core';
 import { useSelector } from 'react-redux';
+import DirectionsRunSharpIcon from '@material-ui/icons/DirectionsRunSharp';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -40,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.white, 0.15),
     '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
+      backgroundColor: fade(theme.palette.common.white, 0.75),
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
@@ -121,7 +122,7 @@ const Header = () => {
       
         const menuId = 'primary-search-account-menu';
         const renderMenu = (
-          <Menu
+          <Menu 
             anchorEl={anchorEl}
             anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
             id={menuId}
@@ -183,8 +184,8 @@ const Header = () => {
         );
       
         return (
-          <div className={classes.grow}>
-            <AppBar position="static">
+          <div className={classes.grow} >
+            <AppBar position="static" style={{backgroundColor:'#4a95f7',height:'70px'}}>
               <Toolbar>
                 <IconButton
                   edge="start"
@@ -197,16 +198,18 @@ const Header = () => {
                   <MenuIcon />
                   
                 </IconButton>
+                <DirectionsRunSharpIcon style={{fontSize:'50px'}}/>
                 <Link to="/">
-                  <Typography variant="h4" style={{color:"#c0c0c0"}} >XsSupport
+                
+                  <Typography variant="h3" style={{color:"#ffffff",marginLeft:'10px',marginTop:'5px'}} >XsSupport
                   </Typography>
                   </Link>
                 
-                <div className={classes.search}>
+                <div className={classes.search} style={{marginTop:'5px'}}>
                   <div className={classes.searchIcon}>
-                    <SearchIcon />
+                    <SearchIcon style={{fontSize:'30px'}} />
                   </div>
-                  <InputBase
+                  <InputBase style={{width:'250px',height:'40px', fontSize:'20px'}}
                     placeholder="Search…"
                     classes={{
                       root: classes.inputRoot,

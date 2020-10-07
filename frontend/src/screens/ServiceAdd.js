@@ -75,16 +75,16 @@ function ServiceAdd (props) {
 
     return  ( <div className="content content-margined">
             <div className="serviceproviders-header">
-            <h3>
+            <h3 style={{marginLeft:'20px'}}>
                  Add Service Provider
               </h3>
-              <button  onClick={()=>openModal({})}>Create Product</button>
+              <button style={{backgroundColor:'#6fc784',marginLeft:'20px',height:'35px',borderRadius:'55px',color:'white',width:'150px',marginBottom:'30px',border:'0.1rem #6fc784'}}  onClick={()=>openModal({})}>Create Product</button>
               </div>
 
      {modalVisible && (
       <div className="form">
       <form onSubmit={submitHandler}>
-      <ul className="form-container">
+      <ul className="form-container" >
           <li>
               Create Service Provider
           </li>
@@ -97,7 +97,7 @@ function ServiceAdd (props) {
               <label htmlFor="name">
                   Name
               </label>
-              <input type="text " name="name" id="name" value={name} onChange={(e) => setName(e.target.value)}>
+              <input  type="text " name="name" id="name" value={name} onChange={(e) => setName(e.target.value)}>
 
               </input>
           </li>
@@ -145,13 +145,13 @@ function ServiceAdd (props) {
           </li>
           <li>
 
-          <button type="submit" className="button primary">
+          <button style={{backgroundColor:'#4a95f7',color:'white',fontSize:'20px',marginTop:'10px',marginBottom:'10px'}} type="submit" className="button primary">
                   {id ? 'Update' : 'Create'}
                 </button>
           </li>
 
           <li>
-              <button
+              <button style={{backgroundColor:'#4a95f7',color:'white',fontSize:'20px'}}
                   type="button"
                   onClick={() => setModalVisible(false)}
                   className="button secondary"
@@ -164,7 +164,7 @@ function ServiceAdd (props) {
       </div>
      )}
            
-            <div className="serviceproviders-list">
+            <div className="serviceproviders-list" style={{marginLeft:'20px'}}>
               <table>
                   <thead>
                       <tr>
@@ -185,7 +185,7 @@ function ServiceAdd (props) {
                       </th>
                       </tr>
                   </thead>
-                  <tbody>
+                  <tbody >
                       {serviceproviders.map(serviceprovider=>( <tr >          
                       <td>
                               {serviceprovider._id}
@@ -200,8 +200,8 @@ function ServiceAdd (props) {
                       {serviceprovider.name}
                       </td>
                       <td>
-                      <button className="button" onClick={()=> openModal(serviceprovider)}>Edit</button>
-                      <button onClick={()=> deleteHandler(serviceprovider)}>Delete</button>
+                      <button  style={{marginLeft:'5px',backgroundColor:'#2f809c',height:'35px',marginTop:'5px',borderRadius:'55px',width:'50px',border:'1rem #6fc784',color:"white"}} onClick={()=> openModal(serviceprovider)}>Edit</button>
+                      <button  style={{backgroundColor:'#ad3d3d',marginLeft:'5px',height:'35px',borderRadius:'55px',border:'1rem #6fc784',color:'white'}} onClick={()=> deleteHandler(serviceprovider)}>Delete</button>
                       </td>
                    
                       </tr>))}

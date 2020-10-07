@@ -20,7 +20,7 @@ function App() {
  
     return (
 <BrowserRouter>
-
+<div>
 <Header/>
 
     
@@ -44,8 +44,11 @@ function App() {
 
     </div>
 
-
+    <div style={{marginTop:'500px'}}>
+       
+    </div>
     <Footer/>
+    </div>
 </BrowserRouter>
   );
 }

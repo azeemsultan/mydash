@@ -23,11 +23,12 @@ import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 500,
   },
   media: {
     height: 0,
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '56.25%', // 16:9,
+    height: '80px'
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -40,11 +41,9 @@ const useStyles = makeStyles((theme) => ({
     transform: 'rotate(180deg)',
   },
   avatar: {
-    backgroundColor: "#3249bf",
+    backgroundColor: "#4183d9",
   },
-  topTitle:{
-    fontSize: 20
-  }
+
 }));
 
 function HomeScreen (props) {
@@ -77,7 +76,7 @@ function HomeScreen (props) {
 </Grid>
      
 <Grid item sm={10}>
-        <ul className="serviceproviders">
+        <ul className="serviceproviders" >
       
         {
             serviceproviders.map(serviceprovider=>
@@ -86,7 +85,7 @@ function HomeScreen (props) {
   
       
            <Card className={classes.root}>
-      <CardHeader
+      <CardHeader 
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
            {serviceprovider.name.charAt(0)}
@@ -94,12 +93,15 @@ function HomeScreen (props) {
         }
         action={
           <IconButton aria-label="settings">
-            <MoreVertIcon />
+            
           </IconButton>
         }
         
-      title={serviceprovider.name} 
-        subheader={serviceprovider.status}
+       title={
+        <Typography variant="h4">
+        {serviceprovider.name} 
+        </Typography>
+       }
       />
        
        <Link to={'/serviceprovider/' + serviceprovider._id}>
@@ -112,7 +114,7 @@ function HomeScreen (props) {
       /> 
      </Link>
       <CardContent>
-        <Typography variant="h6" color="textSecondary" component="p">
+        <Typography variant="h5" color="textSecondary" component="p">
          {serviceprovider.description}
         </Typography>
       </CardContent>
