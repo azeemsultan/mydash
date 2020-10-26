@@ -22,9 +22,11 @@ const SpRegister = () => {
 
            <div style={{marginLeft:'20px',marginTop:'40px'}}>
 
-           <h5 style={{paddingTop:'20px'}}>Name</h5>
-       <input style={{width:'80%'}} type='text' placeholder='Enter your Name'/>
+           <h5 style={{paddingTop:'20px'}}> First Name</h5>
+       <input style={{width:'80%'}} type='text' placeholder='Enter your First Name'/>
 
+       <h5 style={{paddingTop:'20px'}}>Last Name</h5>
+       <input style={{width:'80%'}} type='text' placeholder='Enter your Last Name'/>
                <h5>Email</h5>
        <input style={{width:'80%'}} type='text' placeholder='Enter your Email'/>
 
@@ -36,6 +38,9 @@ const SpRegister = () => {
 
        <h5>Confirm Password</h5>
        <input style={{width:'80%'}} type='password' placeholder='Enter your Password'/>
+
+       <h5>Contact No</h5>
+       <input style={{width:'80%'}} type='text' placeholder='Enter your Contact Number'/>
     
        </div>
        <button style={{marginBottom:'30px',marginTop:'30px',marginLeft:'20px',width:'80%',backgroundColor:'#4a95f7',borderRadius:'9px',color:'white',fontSize:'20px'}}>Register</button>
