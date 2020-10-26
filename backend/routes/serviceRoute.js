@@ -1,6 +1,6 @@
 import express from 'express';
 import Service from '../models/serviceModel';
-import { getToken } from '../util';
+
 
 const router = express.Router();
 
@@ -83,4 +83,7 @@ router.delete("/:id", async (req,res)=>{
         res.send("Error in Deletion");
     }
 });
+
+
+
 export default  router;

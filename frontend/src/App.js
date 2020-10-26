@@ -12,6 +12,8 @@ import Header from './screens/Header';
 import SignInScreen from './screens/SigninScreen';
 import RegisterScreen from './screens/registerScreen';
 import ServiceAdd from './screens/ServiceAdd';
+import SpRegister from './screens/serviceproviderSignin';
+import PostTask from './screens/PostTask';
 
 
 
@@ -29,6 +31,8 @@ function App() {
    <main className="main">
         <div className="content">
             <Route path="/signin" component ={SignInScreen}/>
+            <Route path="/posttask" component ={PostTask}/>
+            <Route path="/serviceproviderregister" component ={SpRegister}/>
             <Route path="/serviceadd" component ={ServiceAdd}/>
             <Route path="/register" component ={RegisterScreen}/>
             <Route path="/serviceprovider/:id"  exact={true} component={ServiceScreen}/>
