@@ -56,7 +56,15 @@ function RegisterScreen (props) {
                 </li>
                 <li> 
                     <label htmlFor="email">
-                    <Typography  variant="h4" style={{color: "#5e7bdb", marginTop:'10px'}}>Name</Typography>
+                    <Typography  variant="h4" style={{color: "#5e7bdb", marginTop:'10px'}}>First Name</Typography>
+                    </label>
+                    <input style={{marginTop:'10px',border:'0.1rem #ffffff',height:'30px', marginTop:'10px'}} type="name" name="name" id="name" onChange={(e) => setName(e.target.value)}>
+
+                    </input>
+                </li>
+                <li> 
+                    <label htmlFor="email">
+                    <Typography  variant="h4" style={{color: "#5e7bdb", marginTop:'10px'}}>Last Name</Typography>
                     </label>
                     <input style={{marginTop:'10px',border:'0.1rem #ffffff',height:'30px', marginTop:'10px'}} type="name" name="name" id="name" onChange={(e) => setName(e.target.value)}>
 
@@ -85,6 +93,14 @@ function RegisterScreen (props) {
                     <input style={{marginTop:'10px',border:'0.1rem #ffffff',height:'30px', marginTop:'10px'}} type="password" name="password" id="password" onChange={(e)=> setRePassword(e.target.value)}>
 
                     </input>
+                    <li> 
+                    <label htmlFor="email">
+                    <Typography  variant="h4" style={{color: "#5e7bdb", marginTop:'10px'}}>Contact No</Typography>
+                    </label>
+                    <input style={{marginTop:'10px',border:'0.1rem #ffffff',height:'30px', marginTop:'10px'}} type="name" name="name" id="name" onChange={(e) => setName(e.target.value)}>
+
+                    </input>
+                </li>
                 </li>
                 <li>
                 <button style={{marginTop:'20px',backgroundColor:'#4a95f7',color:'#ffffff',fontSize:'20px',marginBottom:'10px'}} type="submit" className="button-primary">Register now</button>

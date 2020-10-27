@@ -5,16 +5,14 @@ import postTask from '../models/postTask';
 
 const router = express.Router();
 
-router.post("/Newsfeed/newsfeed", async(req, res)=>{
+router.post("/posttask", async(req, res)=>{
     const task = new postTask({
-        name: req.body.name,
-        image: req.body.image,
+        title: req.body.title,
         category: req.body.category,
-        countInStock: req.body.countInStock,
-        price: req.body.price,
-        rating: req.body.rating,
+        location: req.body.location,
+        budget: req.body.budget,
         description: req.body.description,
-        reviews: req.body.reviews
+    
     });
 
     const newTask = await task.save();
@@ -23,3 +21,6 @@ router.post("/Newsfeed/newsfeed", async(req, res)=>{
     }
     return res.status(500).send({message: ' Error in posting task'})
 })
+
+
+export default router;

@@ -7,9 +7,10 @@ const PostTask = () => {
          <Grid item md={3}>
 
          </Grid>
-         <Grid item md={6} xs={12}>
+         <Grid item sm={6} xs={12}>
+           
          <Paper elevation={3} >
-         
+         <form>
          <Typography variant='h3' style={{textAlign:'center',marginTop:'20px',paddingTop:'20px'}}>
              Post a task
          </Typography>
@@ -46,6 +47,7 @@ const PostTask = () => {
          </div>
          </div>
          <button style={{marginTop:'20px',marginBottom:'20px',marginLeft:'30%',width:'40%',marginRight:'30%',}}>Post</button>
+         </form>
          </Paper>
          </Grid>
 

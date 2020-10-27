@@ -24,6 +24,7 @@ const Footer = () => {
     const classes = useStyles();
     return ( 
         <Grid container>
+            <Grid item md={12}>
       <AppBar className={classes.foot} position="static" style={{backgroundColor:'#4a95f7'}}>
           <Toolbar>
               <Typography variant="h5" className={classes.typo}>
@@ -31,6 +32,7 @@ const Footer = () => {
               </Typography>
           </Toolbar>
       </AppBar>
+      </Grid>
       </Grid>
     );
 }

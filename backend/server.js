@@ -6,6 +6,9 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import userRoute from './routes/userRoute'
 import serviceRoute from './routes/serviceRoute'
+import postRoute from './routes/postRoute'
+
+
 //import fileUpload from 'express-fileupload';
 
 const mongodbUrl = config.MONGODB_URL;
@@ -21,6 +24,7 @@ const app= express();
 app.use(bodyParser.json());
 app.use("/api/users", userRoute);
 app.use("/api/serviceproviders", serviceRoute);
+app.use("/api/posttask",postRoute)
 /*
 app.get("/api/serviceprovider/:id" , (req,res) => {
     const serviceId = req.params.id;

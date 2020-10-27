@@ -42,7 +42,9 @@ router.post("/", async(req, res)=>{
         rating: req.body.rating,
         description: req.body.description,
         reviews: req.body.reviews
-    });
+        
+    }
+    );
 
     const newService = await serviceprovider.save();
     if(newService){
